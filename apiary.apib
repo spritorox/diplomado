@@ -1,80 +1,64 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# diplomado
+# Sistema Gestion de tráfico urbano
+Servicios control de Alarmas
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+##Alarmas [/Alarmas/{id}]
+Administracion Sobre las Alarmas de Trafico
 
-## Questions Collection [/questions]
++ Parameters
+    + id (int)
+    + nota (string)
 
-### List All Questions [GET]
+##Buscar Alarma[GET /Alarmas]
+Obtiene Alarmas Generadas
+
++ Response 200 (application/json)
+
+{"Alarmas":
+    [
+        {
+            "id": 1,
+            "nota": "Alarma generada por x",
+        }
+        {
+            "id": 2,
+            "nota": "Alarma generada por x",
+        }
++ Response 404 (application/json)
+
+        { 
+            "error": "Alerta no encontrada" 
+        }
+    ]
+}
+
+## Lista Alarma [GET /Alarmas/{id}]
+Lista Alarma Seleccionada
+
++ Parameters
+    + id (int)
 
 + Response 200 (application/json)
 
         [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
+        {
+            "id": 1,
+            "nota": "Alarma generada por x",
+        }
         ]
 
-### Create a New Question [POST]
+## Eliminar Alarmas[DELETE /Alarmas/{id}]
+Elimina Videos Seleccionada
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
++ Parameters
+    + id (int)
+   
++ Response 200
+    
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "result": True,
+            "message": "Alarma Eliminada"
         }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+   
