@@ -192,3 +192,69 @@ Elimina Fotogramas
             "result": True,
             "message": "Fotograma Eliminada"
         }
+
+# Visualizar Camaras
+Visualiza las Camaras
+
+##Camaras [/Camaras/{id}]
+Administracion Sobre los Camaras
+
++ Parameters
+    + id (int)
+    + ubicacion (string)
+    + fecha (string)
+
+##Buscar Camaras[GET /Camaras]
+Obtiene Listado de Camaras
+
++ Response 200 (application/json)
+
+        {"Camaras":
+            [
+        {
+            "id": 1,
+            "ubicacion": "1;1",
+            "fecha": "05-09-2015 18:00"
+        }
+        {
+            "id": 2,
+            "ubicacion": "1;1",
+            "fecha": "05-09-2015 18:00"
+        }
++ Response 404 (application/json)
+
+        { 
+            "error": "Camara no encontrada" 
+        }
+            ]
+        }
+
+## Lista Camaras [GET /Camaras/{id}]
+Lista Camaras Seleccionada
+
++ Parameters
+    + id (int)
+
++ Response 200 (application/json)
+
+        [
+        {
+            "id": 1,
+            "ubicacion": "1;1",
+            "fecha": "05-09-2015 18:00"
+        }
+        ]
+
+## Eliminar Camaras[DELETE /Camaras/{id}]
+Elimina Camaras
+
++ Parameters
+    + id (int)
+   
++ Response 200
+    
+        {
+            "result": True,
+            "message": "Camara Eliminada"
+        }
+ 
