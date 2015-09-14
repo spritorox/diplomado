@@ -62,3 +62,69 @@ Elimina Videos Seleccionada
             "message": "Alarma Eliminada"
         }
    
+
+## Grabaciones [/Grabaciones/{id}]
+Administracion Sobre las Grabaciones de Trafico
+
++ Parameters
+    + id (int)
+    + nota (string)
+    + tamano (int)
+
+
+##Buscar Grabaciones[GET /Grabaciones]
+Obtiene Grabaciones Generadas
+
++ Response 200 (application/json)
+
+{"Grabacioness":
+    [
+        {
+            "id": 1,
+            "tamano": "10Mb",
+        
+
+}
+        {
+            "id": 2,
+            "tamano": "10Mb",
+        }
++ Response 404 (application/json)
+
+        { 
+            "error": "Alerta no encontrada" 
+        }
+    ]
+}
+
+
+## Lista Grabaciones [GET /Grabaciones/{id}]
+Lista Grabaciones Seleccionada
+
++ Parameters
+    + id (int)
+
++ Response 200 (application/json)
+
+        [
+        {
+            "id": 1,
+            "tamano": "10Mb", 
+        }
+        ]
+
+
+## Eliminar Grabaciones[DELETE /Grabaciones/{id}]
+Elimina Grabacion Seleccionada
+
++ Parameters
+    + id (int)
+   
++ Response 200
+    
+        {
+            "result": True,
+            "message": "Grabaciones Eliminada"
+       
+
+        }
