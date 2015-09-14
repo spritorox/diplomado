@@ -1,6 +1,3 @@
-FORMAT: 1A
-HOST: http://private-5c515-diplomado1.apiary-mock.com
-
 # Sistema Gestion de tráfico urbano
 Servicios control de Alarmas
 
@@ -20,11 +17,11 @@ Obtiene Alarmas Generadas
             [
         {
             "id": 1,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
         {
             "id": 2,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
 + Response 404 (application/json)
 
@@ -45,12 +42,12 @@ Lista Alarma Seleccionada
         [
         {
             "id": 1,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
         ]
 
 ## Eliminar Alarmas[DELETE /Alarmas/{id}]
-Elimina Videos Seleccionada
+Elimina Alarma Seleccionada
 
 + Parameters
     + id (int)
@@ -63,6 +60,9 @@ Elimina Videos Seleccionada
         }
    
 
+# Reproduce Grabaciones [/Grabaciones/{id}/reproduce]
+Reproduce las Grabaciones
+
 ## Grabaciones [/Grabaciones/{id}]
 Administracion Sobre las Grabaciones de Trafico
 
@@ -70,7 +70,6 @@ Administracion Sobre las Grabaciones de Trafico
     + id (int)
     + nota (string)
     + tamano (int)
-
 
 ##Buscar Grabaciones[GET /Grabaciones]
 Obtiene Grabaciones Generadas
@@ -94,7 +93,6 @@ Obtiene Grabaciones Generadas
         }
          ]
         }
-
 
 ## Lista Grabaciones [GET /Grabaciones/{id}]
 Lista Grabaciones Seleccionada
@@ -122,23 +120,75 @@ Elimina Grabacion Seleccionada
         {
             "result": True,
             "message": "Grabaciones Eliminada"
-       
-
         }
-
-# Reproduce Grabaciones [/Grabaciones/{id}/reproduce]
-Reproduce las Grabaciones
-
-    + Model (application/json)
-    [
-        + Body 
-        { 
-                "id": 1 
-        }
-    ]
 
 ## Reproduce las Grabaciones [GET]
 Reproduce las Grabaciones
-    + Response 200
+
++ Response 200
+
            [reproduce Grabaciones][]
 
+# Visualizar Fotogramas
+Visualizar los Fotogramas
+
+##Fotogramas [/Fotogramas/{id}]
+Administracion Sobre los Fotogramas de Trafico
+
++ Parameters
+    + id (int)
+    + nota (string)
+    + fecha_captura (string)
+
+##Buscar Fotogramas[GET /Fotogramas]
+Obtiene Alarmas Generadas
+
++ Response 200 (application/json)
+
+        {"Fotogramas":
+            [
+        {
+            "id": 1,
+            "nota": "nota de fotograma",
+            "fecha_captura": "05-09-2015 18:00"
+        }
+        {
+            "id": 2,
+            "nota": "nota de fotograma",
+            "fecha_captura": "05-09-2015 18:00"
+        }
++ Response 404 (application/json)
+
+        { 
+            "error": "Alerta no encontrada" 
+        }
+            ]
+        }
+
+## Lista Fotogramas [GET /Fotogramas/{id}]
+Lista Fotogramas Seleccionada
+
++ Parameters
+    + id (int)
+
++ Response 200 (application/json)
+
+        [
+        {
+            "id": 1,
+            "nota": "nota de fotograma",
+        }
+        ]
+
+## Eliminar Fotogramas[DELETE /Fotogramas/{id}]
+Elimina Fotogramas
+
++ Parameters
+    + id (int)
+   
++ Response 200
+    
+        {
+            "result": True,
+            "message": "Fotograma Eliminada"
+        }
