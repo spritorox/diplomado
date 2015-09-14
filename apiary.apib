@@ -16,8 +16,8 @@ Obtiene Alarmas Generadas
 
 + Response 200 (application/json)
 
-{"Alarmas":
-    [
+        {"Alarmas":
+            [
         {
             "id": 1,
             "nota": "Alarma generada por x",
@@ -31,8 +31,8 @@ Obtiene Alarmas Generadas
         { 
             "error": "Alerta no encontrada" 
         }
-    ]
-}
+            ]
+        }
 
 ## Lista Alarma [GET /Alarmas/{id}]
 Lista Alarma Seleccionada
@@ -77,14 +77,12 @@ Obtiene Grabaciones Generadas
 
 + Response 200 (application/json)
 
-{"Grabacioness":
-    [
-        {
+        {"Grabaciones":
+         [
+            {
             "id": 1,
             "tamano": "10Mb",
-        
-
-}
+                }
         {
             "id": 2,
             "tamano": "10Mb",
@@ -92,10 +90,10 @@ Obtiene Grabaciones Generadas
 + Response 404 (application/json)
 
         { 
-            "error": "Alerta no encontrada" 
+            "error": "Grabacion no encontrada" 
         }
-    ]
-}
+         ]
+        }
 
 
 ## Lista Grabaciones [GET /Grabaciones/{id}]
@@ -112,7 +110,6 @@ Lista Grabaciones Seleccionada
             "tamano": "10Mb", 
         }
         ]
-
 
 ## Eliminar Grabaciones[DELETE /Grabaciones/{id}]
 Elimina Grabacion Seleccionada
