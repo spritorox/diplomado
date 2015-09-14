@@ -137,6 +137,70 @@ Reproduce las Grabaciones
            [reproduce Grabaciones][]
 
 
+# Visualizar Fotogramas
+Visualizar los Fotogramas
+
+##Fotogramas [/Fotogramas/{id}]
+Administracion Sobre los Fotogramas de Trafico
+
++ Parameters
+    + id (int)
+    + nota (string)
+    + fecha_captura (string)
+
+##Buscar Fotogramas[GET /Fotogramas]
+Obtiene Alarmas Generadas
+
++ Response 200 (application/json)
+
+        {"Fotogramas":
+            [
+        {
+            "id": 1,
+            "nota": "nota de fotograma",
+            "fecha_captura": "05-09-2015 18:00"
+        }
+        {
+            "id": 2,
+            "nota": "nota de fotograma",
+            "fecha_captura": "05-09-2015 18:00"
+        }
++ Response 404 (application/json)
+
+        { 
+            "error": "Alerta no encontrada" 
+        }
+            ]
+        }
+
+## Lista Fotogramas [GET /Fotogramas/{id}]
+Lista Fotogramas Seleccionada
+
++ Parameters
+    + id (int)
+
++ Response 200 (application/json)
+
+        [
+        {
+            "id": 1,
+            "nota": "nota de fotograma",
+        }
+        ]
+
+## Eliminar Fotogramas[DELETE /Fotogramas/{id}]
+Elimina Fotogramas
+
++ Parameters
+    + id (int)
+   
++ Response 200
+    
+        {
+            "result": True,
+            "message": "Fotograma Eliminada"
+        }
+ 
 
 
 
