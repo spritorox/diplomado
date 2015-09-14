@@ -20,11 +20,11 @@ Obtiene Alarmas Generadas
             [
         {
             "id": 1,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
         {
             "id": 2,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
 + Response 404 (application/json)
 
@@ -45,12 +45,12 @@ Lista Alarma Seleccionada
         [
         {
             "id": 1,
-            "nota": "Alarma generada por x",
+            "nota": "Alarma generada por trafico",
         }
         ]
 
 ## Eliminar Alarmas[DELETE /Alarmas/{id}]
-Elimina Videos Seleccionada
+Elimina Alarma Seleccionada
 
 + Parameters
     + id (int)
@@ -74,7 +74,6 @@ Administracion Sobre las Grabaciones de Trafico
     + nota (string)
     + tamano (int)
 
-
 ##Buscar Grabaciones[GET /Grabaciones]
 Obtiene Grabaciones Generadas
 
@@ -97,7 +96,6 @@ Obtiene Grabaciones Generadas
         }
          ]
         }
-
 
 ## Lista Grabaciones [GET /Grabaciones/{id}]
 Lista Grabaciones Seleccionada
@@ -125,8 +123,6 @@ Elimina Grabacion Seleccionada
         {
             "result": True,
             "message": "Grabaciones Eliminada"
-       
-
         }
 
 ## Reproduce las Grabaciones [GET]
