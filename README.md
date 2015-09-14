@@ -150,12 +150,12 @@ Obtiene Alarmas Generadas
         {
             "id": 1,
             "nota": "nota de fotograma",
-            "fecha_captura": "05-09-2015 18:00"
+            "fecha_captura": "01-01-2015 00:01"
         }
         {
             "id": 2,
             "nota": "nota de fotograma",
-            "fecha_captura": "05-09-2015 18:00"
+            "fecha_captura": "01-01-2015 00:02"
         }
 + Response 404 (application/json)
 
@@ -214,12 +214,12 @@ Obtiene Listado de Camaras
         {
             "id": 1,
             "ubicacion": "1;1",
-            "fecha": "05-09-2015 18:00"
+            "fecha": "01-01-2015 00:01"
         }
         {
             "id": 2,
             "ubicacion": "1;1",
-            "fecha": "05-09-2015 18:00"
+            "fecha": "01-01-2015 00:01"
         }
 + Response 404 (application/json)
 
@@ -241,7 +241,7 @@ Lista Camaras Seleccionada
         {
             "id": 1,
             "ubicacion": "1;1",
-            "fecha": "05-09-2015 18:00"
+            "fecha": "01-01-2015 00:01"
         }
         ]
 
@@ -258,3 +258,4 @@ Elimina Camaras
             "message": "Camara Eliminada"
         }
  
+
