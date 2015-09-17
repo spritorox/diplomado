@@ -10,6 +10,8 @@ Administracion Sobre las Alarmas de Trafico
 + Parameters
     + id (int)
     + nota (string)
+    + fecha_alarma (string)
+    + tipo_alarma (string)
 
 ##Buscar Alarma[GET /Alarmas]
 Obtiene Alarmas Generadas
@@ -21,10 +23,14 @@ Obtiene Alarmas Generadas
         {
             "id": 1,
             "nota": "Alarma generada por trafico",
+            "fecha_alarma": "01-01-2015 00:02",
+            "tipo_alarma": "choque",
         }
         {
             "id": 2,
             "nota": "Alarma generada por trafico",
+            "fecha_alarma": "01-01-2015 00:02",
+            "tipo_alarma": "choque",
         }
 + Response 404 (application/json)
 
@@ -73,6 +79,8 @@ Administracion Sobre las Grabaciones de Trafico
     + id (int)
     + nota (string)
     + tamano (int)
+    + inicio_transmision (string)
+    + fin_transmision (string) 
 
 ##Buscar Grabaciones[GET /Grabaciones]
 Obtiene Grabaciones Generadas
@@ -84,10 +92,14 @@ Obtiene Grabaciones Generadas
             {
             "id": 1,
             "tamano": "10Mb",
+            "inicio_transmision": "01-01-2015 00:02", 
+            "fin_transmision": "01-01-2015 00:02",
                 }
         {
             "id": 2,
             "tamano": "10Mb",
+            "inicio_transmision": "01-01-2015 00:02", 
+            "fin_transmision": "01-01-2015 00:02",
         }
 + Response 404 (application/json)
 
@@ -108,7 +120,9 @@ Lista Grabaciones Seleccionada
         [
         {
             "id": 1,
-            "tamano": "10Mb", 
+            "tamano": "10Mb",
+            "inicio_transmision": "01-01-2015 00:02", 
+            "fin_transmision": "01-01-2015 00:02",
         }
         ]
 
