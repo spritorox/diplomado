@@ -94,12 +94,14 @@ Obtiene Grabaciones Generadas
             "tamano": "10Mb",
             "inicio_transmision": "01-01-2015 00:02", 
             "fin_transmision": "01-01-2015 00:02",
+            "descargar": "http://repositorio/download/video010120150002"
                 }
         {
             "id": 2,
             "tamano": "10Mb",
             "inicio_transmision": "01-01-2015 00:02", 
             "fin_transmision": "01-01-2015 00:02",
+            "descargar": "http://repositorio/download/video010120150002"
         }
 + Response 404 (application/json)
 
@@ -144,7 +146,7 @@ Reproduce las Grabaciones
 
 + Response 200
 
-           [reproduce Grabaciones][]
+        [reproduce Grabaciones][]
 
 # Visualizar Fotogramas
 Visualizar los Fotogramas
@@ -220,6 +222,8 @@ Administracion Sobre los Camaras
     + id (int)
     + ubicacion (string)
     + fecha (string)
+    + ip (string)
+    + coordenadas (string)
 
 ##Buscar Camaras[GET /Camaras]
 Obtiene Listado de Camaras
@@ -231,12 +235,14 @@ Obtiene Listado de Camaras
         {
             "id": 1,
             "ubicacion": "1;1",
-            "fecha": "01-01-2015 00:01"
+            "fecha": "01-01-2015 00:01",
+            "ip": "127.0.0.1",
         }
         {
             "id": 2,
             "ubicacion": "1;1",
-            "fecha": "01-01-2015 00:01"
+            "fecha": "01-01-2015 00:01",
+            "ip": "127.0.0.1",
         }
 + Response 404 (application/json)
 
