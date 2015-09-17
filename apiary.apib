@@ -224,6 +224,7 @@ Administracion Sobre los Camaras
     + fecha (string)
     + ip (string)
     + coordenadas (string)
+    + marca (string)
 
 ##Buscar Camaras[GET /Camaras]
 Obtiene Listado de Camaras
@@ -237,12 +238,14 @@ Obtiene Listado de Camaras
             "ubicacion": "1;1",
             "fecha": "01-01-2015 00:01",
             "ip": "127.0.0.1",
+            "marca": "generica",
         }
         {
             "id": 2,
             "ubicacion": "1;1",
             "fecha": "01-01-2015 00:01",
             "ip": "127.0.0.1",
+            "marca": "generica",
         }
 + Response 404 (application/json)
 
@@ -265,6 +268,8 @@ Lista Camaras Seleccionada
             "id": 1,
             "ubicacion": "1;1",
             "fecha": "01-01-2015 00:01"
+            "ip": "127.0.0.1",
+            "marca": "generica",
         }
         ]
 
